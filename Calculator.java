@@ -2,29 +2,16 @@ class Calculator
 {
 	//syntax
   //:parameter:datatypes ref, datatypes ref1,.....
-  public static int add(int number1,int number2)
+  public static void add(int number1,int number2)
   {
    int total=number1+number2;
-   return total;
+  System.out.println("the addition "+number1 +" and "+number2+ "is " +total);   
   }
 
   
-  public static int sub(int number1,int number2)
+  public static void sub(int number1,int number2)
   {
   int total=number1-number2;
-  return total;
-  }
-  
-  public static int mul(int number1,int number2)
-  {
-  int total=number1*number2;
-  return total;
-  }
-  
-  
-  public static int div(int number1,int number2)
-  {
-  int total=number1/number2;
-  return total;
+  System.out.println("the sub "+number1 +" and "+number2+" is "+total);
   }
  }
