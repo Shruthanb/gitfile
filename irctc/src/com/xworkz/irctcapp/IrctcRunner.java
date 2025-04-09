@@ -15,6 +15,7 @@ public class IrctcRunner {
 
         IrctcSeva seva = new IrctcSeva();
         boolean result = seva.initiateRegistration(dto);
+        seva.userDetails();
 
         if(result == true) {
             System.out.println("Enjoy booking with IRCTC!");

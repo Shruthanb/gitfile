@@ -3,6 +3,7 @@ package com.xworkz.instagramapp.service;
 import com.xworkz.instagramapp.dto.InstagramDto;
 
 public class InstagramSeva {
+    public InstagramDto ref;
 
     public boolean registerUser(InstagramDto dto){
         boolean isUserRegistered = false;
@@ -11,6 +12,7 @@ public class InstagramSeva {
         if(isUserValid == true){
             isUserRegistered = true;
             System.out.println("Registration Successful");
+            ref=dto;
         }
         else{
             System.out.println("Registration Failed");
@@ -70,4 +72,13 @@ public class InstagramSeva {
 
         return isValidUser;
     }
+     public void userDetails(){
+         System.out.println(" the fullname  is="+ref.getFullName());
+         System.out.println(" the user name is="+ref.getUserName());
+         System.out.println(" the mobile is="+ref.getMobileNumberOrEmail());
+         System.out.println(" the password is="+ref.getPassword());
+         System.out.println(" the confirm password is="+ref.getConfirmPassword());
+         System.out.println(" the date of birth is="+ref.getDateOfBirth());
+         System.out.println(" the gender is="+ref.getGender());
+     }
 }

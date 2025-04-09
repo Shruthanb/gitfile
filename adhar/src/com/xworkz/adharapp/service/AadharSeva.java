@@ -3,6 +3,7 @@ package com.xworkz.adharapp.service;
 import com.xworkz.adharapp.dto.AadharDto;
 
 public class AadharSeva {
+     public AadharDto ref;
     public boolean registerAadhar(AadharDto dto) {
         boolean isAadharRegistered = false;
         boolean isValidDetails = verifyAadharDetails(dto);
@@ -10,6 +11,7 @@ public class AadharSeva {
         if(isValidDetails == true) {
             isAadharRegistered = true;
             System.out.println("Aadhar Registration Successful");
+            ref=dto;
         } else {
             System.out.println("Aadhar Registration Failed");
         }
@@ -51,5 +53,12 @@ public class AadharSeva {
         }
 
         return isValid;
+    }
+    public void userDetails(){
+        System.out.println(" the name is="+ref.getFullName());
+        System.out.println(" the birth is="+ref.getBirthYear());
+        System.out.println(" the address is="+ref.getAddress());
+        System.out.println(" the mobile  is="+ref.getMobileNumber());
+        System.out.println(" the otp  is="+ref.getOtp());
     }
 }

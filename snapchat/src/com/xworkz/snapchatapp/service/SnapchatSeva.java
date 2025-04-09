@@ -3,6 +3,7 @@ package com.xworkz.snapchatapp.service;
 import com.xworkz.snapchatapp.dto.SnapchatDto;
 
 public class SnapchatSeva {
+     public SnapchatDto dto;
     public boolean createSnapchatAccount(SnapchatDto dto) {
         boolean isCreated = false;
         boolean isValid = verifySnapchatDetails(dto);
@@ -10,6 +11,7 @@ public class SnapchatSeva {
         if(isValid == true) {
             isCreated = true;
             System.out.println("Snapchat Account Created Successfully");
+            this.dto=dto;
         } else {
             System.out.println("Snapchat Account Creation Failed");
         }
@@ -61,5 +63,14 @@ public class SnapchatSeva {
         }
 
         return isValid;
+    }
+    public void userDetails(){
+        System.out.println("the user name is ="+this.dto.getUserName());
+        System.out.println("the user mobile is ="+this.dto.getMobileNo());
+        System.out.println("the user email is ="+this.dto.getEmail());
+        System.out.println("the user dob is ="+this.dto.getDob());
+        System.out.println("the user pwd is ="+this.dto.getPassword());
+        System.out.println("the user confirm password is ="+this.dto.getConfirmPassword());
+        System.out.println("the user display is ="+this.dto.getDisplayName());
     }
 }

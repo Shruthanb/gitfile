@@ -14,5 +14,6 @@ public class AjioRunner {
 
         AjioSeva ajioSeva = new AjioSeva();
         ajioSeva.registeruser(ref);
+        ajioSeva.userDetails();
     }
 }

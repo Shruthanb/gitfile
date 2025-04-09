@@ -3,6 +3,8 @@ package com.xworkz.drivingapp.service;
 import com.xworkz.drivingapp.dto.DrivingLicenseDto;
 
 public class DrivingLicenseSeva {
+
+    public DrivingLicenseDto dto;
     public boolean startRegistration(DrivingLicenseDto dto) {
         boolean isRegistered = false;
         boolean isEligible = validateDrivingDetails(dto);
@@ -10,7 +12,9 @@ public class DrivingLicenseSeva {
         if(isEligible == true) {
             isRegistered = true;
             System.out.println("Driving License Registration Successful");
-        } else {
+            this.dto=dto;
+        } else
+        {
             System.out.println("Driving License Registration Failed");
         }
 
@@ -51,5 +55,13 @@ public class DrivingLicenseSeva {
         }
 
         return isValid;
+    }
+    public void  userDetails(){
+
+        System.out.println("the user name is ="+this.dto.getApplicantName());
+        System.out.println("the user dob is ="+this.dto.getDob());
+        System.out.println("the user address is ="+this.dto.getAddress());
+        System.out.println("the user vehicle type is ="+this.dto.getVehicleCategory());
+        System.out.println("the user proof is ="+this.dto.getIdProof());
     }
 }

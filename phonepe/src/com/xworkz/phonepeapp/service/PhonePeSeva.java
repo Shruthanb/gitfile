@@ -3,6 +3,7 @@ package com.xworkz.phonepeapp.service;
 import com.xworkz.phonepeapp.dto.PhonePeDto;
 
 public class PhonePeSeva {
+     public PhonePeDto dto;
     public boolean registerUserPhonePe(PhonePeDto dto) {
         boolean isRegistered = false;
         boolean isValidated = validatePhonePeDetails(dto);
@@ -10,6 +11,7 @@ public class PhonePeSeva {
         if(isValidated == true) {
             isRegistered = true;
             System.out.println("PhonePe Registration Successful");
+            this.dto=dto;
         } else {
             System.out.println("PhonePe Registration Failed");
         }
@@ -61,5 +63,14 @@ public class PhonePeSeva {
         }
 
         return isValid;
+    }
+    public void userDetails(){
+        System.out.println(" the name  is="+this.dto.getFullName());
+        System.out.println(" the  mobile is="+this.dto.getMobileNumber());
+        System.out.println(" the email is="+this.dto.getEmailId());
+        System.out.println(" the pin  is="+this.dto.getUpiPin());
+        System.out.println(" the confirm is="+this.dto.getConfirmPin());
+        System.out.println(" the bank is="+this.dto.getBankName());
+        System.out.println(" the referral is="+this.dto.getReferralCode());
     }
 }

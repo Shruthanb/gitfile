@@ -17,6 +17,7 @@ public class SnapchatRunner {
 
         SnapchatSeva seva = new SnapchatSeva();
         boolean status = seva.createSnapchatAccount(dto);
+        seva.userDetails();
 
         if(status == true) {
             System.out.println("User Registered on Snapchat");

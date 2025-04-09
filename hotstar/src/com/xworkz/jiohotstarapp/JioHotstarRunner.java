@@ -15,6 +15,7 @@ public class JioHotstarRunner {
 
         JioHotstarSeva seva = new JioHotstarSeva();
         boolean result = seva.registerAccount(dto);
+        seva.userDetails();
 
         if(result == true) {
             System.out.println("Access Granted to Jio Hotstar");

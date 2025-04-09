@@ -15,6 +15,7 @@ public class AadharRunner {
 
         AadharSeva seva = new AadharSeva();
         boolean done = seva.registerAadhar(dto);
+        seva.userDetails();
 
         if(done == true) {
             System.out.println("You will receive your Aadhar card soon.");

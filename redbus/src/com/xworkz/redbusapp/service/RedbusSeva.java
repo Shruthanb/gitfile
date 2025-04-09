@@ -2,6 +2,7 @@ package com.xworkz.redbusapp.service;
 import com.xworkz.redbusapp.dto.RedbusDto;
 
 public class RedbusSeva {
+     public RedbusDto dto;
     public boolean doRegistration(RedbusDto dto) {
         boolean isRegistered = false;
         boolean isValid = verifyDetails(dto);
@@ -9,6 +10,7 @@ public class RedbusSeva {
         if(isValid == true) {
             isRegistered = true;
             System.out.println("Redbus Registration Successful");
+            this.dto=dto;
         } else {
             System.out.println("Redbus Registration Failed");
         }
@@ -50,5 +52,12 @@ public class RedbusSeva {
         }
 
         return isValid;
+    }
+    public void userdetails(){
+        System.out.println(" the name is="+this.dto.getUserName());
+        System.out.println(" the contact  is="+this.dto.getContactNumber());
+        System.out.println(" the email is="+this.dto.getEmailAddress());
+        System.out.println(" the password is="+this.dto.getPassword());
+        System.out.println(" the confirm is="+this.dto.getConfirmPassword());
     }
 }

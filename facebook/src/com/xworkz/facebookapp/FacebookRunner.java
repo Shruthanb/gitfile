@@ -17,6 +17,7 @@ public class FacebookRunner {
 
         FacebookSeva seva = new FacebookSeva();
         boolean result = seva.registerUser(dto);
+        seva.userDetails();
 
         if(result == true){
             System.out.println("Facebook Account Created Successfully");

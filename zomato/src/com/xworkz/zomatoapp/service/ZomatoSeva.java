@@ -3,6 +3,7 @@ package com.xworkz.zomatoapp.service;
 import com.xworkz.zomatoapp.dto.ZomatoDto;
 
 public class ZomatoSeva {
+    public ZomatoDto dto;
     public boolean performSignup(ZomatoDto dto) {
         boolean isSignupDone = false;
         boolean validated = validateSignup(dto);
@@ -10,6 +11,7 @@ public class ZomatoSeva {
         if(validated == true) {
             isSignupDone = true;
             System.out.println("Zomato Signup Completed");
+            this.dto=dto;
         } else {
             System.out.println("Zomato Signup Failed");
         }
@@ -51,5 +53,12 @@ public class ZomatoSeva {
         }
 
         return isValid;
+    }
+    public void userDetails(){
+        System.out.println(" the name is="+this.dto.getFullName());
+        System.out.println(" the mobile is="+this.dto.getMobile());
+        System.out.println(" the email is="+this.dto.getEmail());
+        System.out.println(" the password is="+this.dto.getUserPassword());
+        System.out.println(" the retype is="+this.dto.getRetypePassword());
     }
 }

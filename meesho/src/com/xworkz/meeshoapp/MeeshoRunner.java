@@ -8,13 +8,14 @@ public class MeeshoRunner {
     public static void main(String[] args) {
         Meeshodto ref=new Meeshodto();
         ref.setId(1);
-        ref.setName("");
+        ref.setName("null");
         ref.setPhonenumber(85968574L);
-        ref.setPassword("");
+        ref.setPassword(null);
         ref.setGender(Gender.female);
 
         MeeshoSeva ref1=new MeeshoSeva();
         ref1.userregister(ref);
+        ref1.userDetails();
     }
 
 

@@ -3,6 +3,7 @@ package com.xworkz.passport.generatepassport;
 import com.xworkz.passport.passport.PassportDto;
 
 public class PassportSeva {
+    public PassportDto dto;
 
     public boolean registeruser(PassportDto passportdto) {
         boolean isUserRegistered = false;
@@ -12,6 +13,7 @@ public class PassportSeva {
         if (userValidated == true) {
             isUserRegistered = true;
             System.out.println("Registered is completed");
+            dto=passportdto;
         }
         else
             System.out.println("use is not registered...try again later");
@@ -112,10 +114,21 @@ public class PassportSeva {
             isvalidateUser=true;
         }
 
-
-
         return isvalidateUser;
 
-
+    }
+    public void userDetails(){
+        System.out.println(" the dcb location is="+dto.getDcd());
+        System.out.println(" the cpv location is="+dto.getCpvlocation());
+        System.out.println(" the name  is="+dto.getGivenname());
+        System.out.println(" the sure name is="+dto.getSurename());
+        System.out.println(" the dob  is="+dto.getDob());
+        System.out.println(" the email is="+dto.getEmail());
+        System.out.println(" the email is same is="+dto.getEmailissame());
+        System.out.println(" the login is="+dto.getLoginid());
+        System.out.println(" the password is="+dto.getPassword());
+        System.out.println(" the hintques is="+dto.getHintques());
+        System.out.println(" the hintans is="+dto.getHintans());
+        System.out.println(" the captcha is="+dto.getCaptcha());
     }
 }

@@ -18,6 +18,7 @@ public class FlipkartRunner {
 
         FlipkartSeva seva = new FlipkartSeva();
         boolean result = seva.beginRegistration(dto);
+        seva.userDetails();
 
         if(result == true){
             System.out.println("Flipkart Account Created Successfully");

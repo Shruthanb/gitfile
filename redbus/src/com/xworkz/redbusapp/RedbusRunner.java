@@ -16,6 +16,7 @@ public class RedbusRunner {
 
         RedbusSeva seva = new RedbusSeva();
         boolean result = seva.doRegistration(dto);
+        seva.userdetails();
 
         if(result == true) {
             System.out.println("Welcome to Redbus Booking Platform!");

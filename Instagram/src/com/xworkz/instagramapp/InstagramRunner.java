@@ -17,6 +17,7 @@ public class InstagramRunner {
 
         InstagramSeva seva = new InstagramSeva();
         boolean result = seva.registerUser(dto);
+        seva.userDetails();
 
         if(result == true){
             System.out.println("Instagram Account Created Successfully");

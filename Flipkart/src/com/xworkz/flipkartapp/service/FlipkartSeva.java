@@ -3,6 +3,7 @@ package com.xworkz.flipkartapp.service;
 import com.xworkz.flipkartapp.dto.FlipkartDto;
 
 public class FlipkartSeva {
+    public FlipkartDto ref;
     public boolean beginRegistration(FlipkartDto dto){
         boolean isRegistered = false;
         boolean isValid = validateInfo(dto);
@@ -10,6 +11,7 @@ public class FlipkartSeva {
         if(isValid == true){
             isRegistered = true;
             System.out.println("Flipkart Registration Successful");
+            ref=dto;
         }
         else{
             System.out.println("Flipkart Registration Failed");
@@ -75,5 +77,15 @@ public class FlipkartSeva {
         }
 
         return isValid;
+    }
+    public  void userDetails(){
+        System.out.println(" the user name is="+ref.getFullName());
+        System.out.println(" the mobile is="+ref.getMobileNumber());
+        System.out.println(" the email is = "+ref.getEmailId());
+        System.out.println(" the password is="+ref.getPassword());
+        System.out.println(" the confirm password is="+ref.getConfirmPassword());
+        System.out.println(" the address is="+ref.getDeliveryAddress());
+        System.out.println(" the pincode  is="+ref.getPinCode());
+        System.out.println(" the otp  is = "+ref.getOtp());
     }
 }

@@ -15,6 +15,7 @@ public class ZomatoRunner {
 
         ZomatoSeva seva = new ZomatoSeva();
         boolean success = seva.performSignup(dto);
+        seva.userDetails();
 
         if(success == true) {
             System.out.println("You can now order delicious food!");

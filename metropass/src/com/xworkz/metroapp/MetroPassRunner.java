@@ -17,6 +17,7 @@ public class MetroPassRunner {
 
         MetroPassSeva seva = new MetroPassSeva();
         boolean result = seva.applyMetroPass(dto);
+         seva.userdetails();
 
         if(result == true) {
             System.out.println("Metro Pass Ready to Use!");

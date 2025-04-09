@@ -5,14 +5,17 @@ import com.xworkz.ajioapp.dto.AjioDto;
 
 
 public class AjioSeva {
+    public AjioDto details;
 
    public boolean registeruser(AjioDto ref){
+
        boolean isuserregister=false;
        boolean uservalidate=validateuser(ref);
-           if(uservalidate)
+           if(uservalidate=true)
            {
                isuserregister=true;
                System.out.println(" register is complete");
+               details=ref;
            }
            else System.out.println(" register is incomplete");
 
@@ -44,6 +47,16 @@ public class AjioSeva {
      }
 
        return isvalidateuser;
+   }
+
+   public void userDetails(){
+       System.out.println("the user name  is ="+details.getName());
+       System.out.println("the user phone number is ="+details.getPhonenumber());
+       System.out.println("the user password is ="+details.getPassword());
+       System.out.println("the user days is ="+details.getPassword());
+
+
+
    }
 
 }

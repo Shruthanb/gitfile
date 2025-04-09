@@ -16,6 +16,7 @@ public class PhonePeRunner {
 
         PhonePeSeva seva = new PhonePeSeva();
         boolean status = seva.registerUserPhonePe(dto);
+         seva.userDetails();
 
         if(status == true) {
             System.out.println("Welcome to PhonePe!");

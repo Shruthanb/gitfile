@@ -4,6 +4,7 @@ import com.xworkz.oyoapp.dto.OyoDto;
 
 
 public class OyoSeva {
+     public OyoDto ref;
     public boolean registerCustomer(OyoDto dto) {
         boolean isRegistered = false;
         boolean isValid = validateDetails(dto);
@@ -11,6 +12,7 @@ public class OyoSeva {
         if(isValid == true) {
             isRegistered = true;
             System.out.println("OYO Registration Successful");
+            ref=dto;
         } else {
             System.out.println("OYO Registration Failed");
         }
@@ -52,5 +54,12 @@ public class OyoSeva {
         }
 
         return isValid;
+    }
+    public void userdetails(){
+        System.out.println(" the name is="+ref.getFullName());
+        System.out.println(" the mobile is="+ref.getMobileNumber());
+        System.out.println(" the email is="+ref.getEmailId());
+        System.out.println(" the password  is="+ref.getPassword());
+        System.out.println(" the confirm is="+ref.getConfirmPassword());
     }
 }

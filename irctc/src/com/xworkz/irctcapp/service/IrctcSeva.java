@@ -3,6 +3,7 @@ package com.xworkz.irctcapp.service;
 import com.xworkz.irctcapp.dto.IrctcDto;
 
 public class IrctcSeva {
+    public IrctcDto ref;
     public boolean initiateRegistration(IrctcDto dto) {
         boolean isRegistered = false;
         boolean valid = checkDetails(dto);
@@ -10,6 +11,7 @@ public class IrctcSeva {
         if(valid == true) {
             isRegistered = true;
             System.out.println("IRCTC Account Created Successfully");
+            ref=dto;
         } else {
             System.out.println("IRCTC Registration Failed");
         }
@@ -51,5 +53,12 @@ public class IrctcSeva {
         }
 
         return isValid;
+    }
+    public void userDetails(){
+        System.out.println(" the name is="+ref.getUserName());
+        System.out.println(" the mobile is="+ref.getMobileNumber());
+        System.out.println(" the email is="+ref.getEmailId());
+        System.out.println(" the password is="+ref.getPassword());
+        System.out.println(" the confirm is="+ref.getConfirmPassword());
     }
 }

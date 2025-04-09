@@ -16,6 +16,7 @@ public class OyoRunner {
 
         OyoSeva seva = new OyoSeva();
         boolean response = seva.registerCustomer(dto);
+        seva.userdetails();
 
         if(response == true) {
             System.out.println("Welcome to OYO Rooms!");

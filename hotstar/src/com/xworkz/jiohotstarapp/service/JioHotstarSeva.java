@@ -3,13 +3,16 @@ package com.xworkz.jiohotstarapp.service;
 import com.xworkz.jiohotstarapp.dto.JioHotstarDto;
 
 public class JioHotstarSeva {
+    public JioHotstarDto ref;
     public boolean registerAccount(JioHotstarDto dto) {
+
         boolean isRegistered = false;
         boolean valid = validateInput(dto);
 
         if(valid == true) {
             isRegistered = true;
             System.out.println("Jio Hotstar Registration Successful");
+            ref=dto;
         } else {
             System.out.println("Jio Hotstar Registration Failed");
         }
@@ -51,5 +54,13 @@ public class JioHotstarSeva {
         }
 
         return isValid;
+    }
+    public void userDetails(){
+        System.out.println(" the name is = "+ref.getFullName());
+        System.out.println(" the mobile  is = "+ref.getMobileNumber());
+        System.out.println(" the email is = "+ref.getEmailId());
+        System.out.println(" the plan is = "+ref.getSubscriptionPlan());
+        System.out.println(" the device is = "+ref.getDeviceType());
+
     }
 }

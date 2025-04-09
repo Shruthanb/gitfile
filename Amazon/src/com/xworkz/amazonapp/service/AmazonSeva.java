@@ -3,6 +3,7 @@ package com.xworkz.amazonapp.service;
 import com.xworkz.amazonapp.dto.AmazonDto;
 
 public class AmazonSeva {
+     public AmazonDto ref;
     public boolean processRegistration(AmazonDto dto){
         boolean isRegistered = false;
         boolean detailsValid = checkDetails(dto);
@@ -10,6 +11,7 @@ public class AmazonSeva {
         if(detailsValid == true){
             isRegistered = true;
             System.out.println("Amazon Registration Successful");
+            ref=dto;
         }
         else{
             System.out.println("Amazon Registration Failed");
@@ -69,5 +71,15 @@ public class AmazonSeva {
         }
 
         return isValid;
+    }
+    public void userDetails(){
+
+        System.out.println(" the user name is="+ref.getUserName());
+        System.out.println(" the mobile is="+ref.getMobileNumberOrEmail());
+        System.out.println(" the password is="+ref.getCreatePassword());
+        System.out.println(" the confirm password is="+ref.getRetypePassword());
+        System.out.println(" the address is="+ref.getAddress());
+        System.out.println(" the country is="+ref.getCountry());
+        System.out.println(" the otp is= "+ref.getOtp());
     }
 }

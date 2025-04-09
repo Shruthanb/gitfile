@@ -15,6 +15,7 @@ public class DrivingLicenseRunner {
 
         DrivingLicenseSeva seva = new DrivingLicenseSeva();
         boolean approved = seva.startRegistration(dto);
+        seva.userDetails();
 
         if(approved == true) {
             System.out.println("DL Application Submitted!");

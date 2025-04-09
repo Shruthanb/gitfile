@@ -3,6 +3,7 @@ package com.xworkz.facebookapp.service;
 import com.xworkz.facebookapp.dto.FacebookDto;
 
 public class FacebookSeva {
+     public FacebookDto ref;
     public boolean registerUser(FacebookDto dto){
         boolean isRegistered = false;
         boolean isValid = validateUser(dto);
@@ -10,6 +11,7 @@ public class FacebookSeva {
         if(isValid == true){
             isRegistered = true;
             System.out.println("Facebook Registration Successful");
+            ref=dto;
         }
         else{
             System.out.println("Facebook Registration Failed");
@@ -69,5 +71,14 @@ public class FacebookSeva {
         }
 
         return isValidUser;
+    }
+    public void userDetails(){
+        System.out.println(" the fullname  is="+ref.getFirstName());
+        System.out.println(" the  last name is="+ref.getLastName());
+        System.out.println(" the mobile is="+ref.getMobileOrEmail());
+        System.out.println(" the password is="+ref.getNewPassword());
+        System.out.println(" the confirm password is="+ref.getConfirmPassword());
+        System.out.println(" the date of birth is="+ref.getBirthDate());
+        System.out.println(" the gender is="+ref.getGender());
     }
 }

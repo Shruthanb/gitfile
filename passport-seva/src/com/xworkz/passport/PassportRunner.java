@@ -31,5 +31,6 @@ public class PassportRunner {
      if(message==true){
          System.out.println("regester is completed");
      }*/
+        ref.userDetails();
     }
 }

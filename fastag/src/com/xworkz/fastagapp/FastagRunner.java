@@ -14,6 +14,7 @@ public class FastagRunner {
 
         FastagSeva seva = new FastagSeva();
         boolean registered = seva.processFastag(dto);
+        seva.userDetails();
 
         if(registered == true) {
             System.out.println("FASTag ready for toll use!");

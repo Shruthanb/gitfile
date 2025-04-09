@@ -17,6 +17,7 @@ public class AmazonRunner {
 
         AmazonSeva seva = new AmazonSeva();
         boolean status = seva.processRegistration(dto);
+        seva.userDetails();
 
         if(status == true){
             System.out.println("Amazon Account Created Successfully");
